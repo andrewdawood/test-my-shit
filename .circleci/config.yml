@@ -1,7 +1,8 @@
 version: 2.1
 
 jobs:
-  my_job:
+
+  print-world:
     docker:
       - image: circleci/node:13.8.0
     steps:
@@ -11,7 +12,9 @@ jobs:
           command: echo "Hello Error!"
           when: on_fail
 
+
 workflows:
-  my_workflow:
+  say-hello-workflow:
     jobs:
-      - my_job
+      - print-world
+
