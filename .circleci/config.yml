@@ -1,21 +1,17 @@
 version: 2.1
 
 jobs:
-
-  print-world:
+  my_job:
     docker:
       - image: circleci/node:13.8.0
     steps:
-      - checkout
-      - exit 1
+      - run: exit 1
       - run:
           name: on error
           command: echo "Hello Error!"
           when: on_fail
 
-
 workflows:
-  say-hello-workflow:
+  my_workflow:
     jobs:
-      - print-world
-
+      - my_job
