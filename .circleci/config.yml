@@ -17,7 +17,8 @@ jobs:
       - checkout
       - run:
           name: "Say hello"
-          command: "echo test-my-shit-part-2!"
+          command: echo $pipeline.id 
+
 workflows:
   say-hello-workflow:
     jobs:
