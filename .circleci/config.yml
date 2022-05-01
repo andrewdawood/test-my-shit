@@ -25,4 +25,4 @@ workflows:
     jobs:
       - say-hello
       - print-world
-          requries: [say-hello]
+         requries: [say-hello]
