@@ -1,21 +1,12 @@
 version: 2.1
 
 jobs:
-  say-hello:
-    docker:
-      - image: cimg/base:stable
-    steps:
-      - checkout
-      - run:
-          name: "Say hello"
-          command: "echo Hello, World!"
 
   print-world:
     docker: 
       - imagljlj;lkjk0
     steps:
       - checkout
-      - run: exit 1
       - run:
           name: on error
           command: echo "Hello Error!"
@@ -25,7 +16,5 @@ jobs:
 workflows:
   say-hello-workflow:
     jobs:
-      - say-hello
-      - print-world:
-          requries:
-            - say-hello
+      - print-world
+
