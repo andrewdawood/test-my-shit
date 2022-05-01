@@ -12,16 +12,21 @@ jobs:
 
   print-world:
     docker: 
-      - image: circleci/node:13.8.0
+      - imagljlj;lkjk0
     steps:
       - checkout
+    steps:
+      - run: exit 1
       - run:
-          name: "Say hello"
-          command: "echo test-my-shit-part-2!"
+          name: on error
+          command: echo "Hello Error!"
+          when: on_fail
+
+
 workflows:
   say-hello-workflow:
     jobs:
       - say-hello
       - print-world:
           requries:
-           - say-hello
+            - say-hello
