@@ -15,7 +15,6 @@ jobs:
       - imagljlj;lkjk0
     steps:
       - checkout
-    steps:
       - run: exit 1
       - run:
           name: on error
