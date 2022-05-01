@@ -3,8 +3,8 @@ version: 2.1
 jobs:
 
   print-world:
-    docker: 
-      - imagljlj;lkjk0
+    docker:
+      - image: circleci/node:13.8.0
     steps:
       - checkout
       - run:
