@@ -23,5 +23,5 @@ workflows:
     jobs:
       - say-hello
       - print-world:
-          requries:
+          requires:
            - say-hello
